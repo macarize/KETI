@@ -2,15 +2,14 @@
 
 [KETI Dataset person](https://unistackr0-my.sharepoint.com/:u:/g/personal/macarize_unist_ac_kr/EbKrq2yG__5CigsmvPZGxKABubdFk0CrrwH_nLq0Lf-6yQ?e=B9MwMu).
 
-<p>
 
-data/
-  KETI/
-    test/
-    train_val/
-    test.csv
-    train_val.csv
-</p>
+data/\
+&nbsp;KETI/\
+&nbsp;&nbsp;test/\
+&nbsp;&nbsp;train_val/\
+&nbsp;&nbsp;test.csv\
+&nbsp;&nbsp;train_val.csv\
+
 
 
 Train/evaluation : run train.py
