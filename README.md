@@ -13,3 +13,4 @@ data/\
 
 
 Train/evaluation : run train.py
+Person cropping, parsing : cropping_parsing.py
