@@ -1,7 +1,7 @@
 import argparse
 import json
 import os
-os.environ['CUDA_VISIBLE_DEVICES'] = '1'
+os.environ['CUDA_VISIBLE_DEVICES'] = '0'
 import pickle
 
 from dataset.augmentation import get_transform
@@ -23,9 +23,10 @@ from models.base_block import FeatClassifier
 from tools.function import get_model_log_path, get_reload_weight
 from tools.utils import set_seed, str2bool, time_str
 from models.backbone import swin_transformer, resnet, bninception
-from models.backbone.tresnet import tresnet
+# from models.backbone.tresnet import tresnet
 from losses import bceloss, scaledbceloss
 
+import dataload
 set_seed(605)
 
 
@@ -34,46 +35,25 @@ def main(cfg, args):
     model_dir, log_dir = get_model_log_path(exp_dir, cfg.NAME)
 
     train_tsfm, valid_tsfm = get_transform(cfg)
-    print(valid_tsfm)
 
-    if cfg.DATASET.TYPE == 'multi_label':
-        train_set = COCO14(cfg=cfg, split=cfg.DATASET.TRAIN_SPLIT, transform=train_tsfm,
-                           target_transform=cfg.DATASET.TARGETTRANSFORM)
-
-        valid_set = COCO14(cfg=cfg, split=cfg.DATASET.VAL_SPLIT, transform=valid_tsfm,
-                           target_transform=cfg.DATASET.TARGETTRANSFORM)
-    else:
-        train_set = PedesAttr(cfg=cfg, split=cfg.DATASET.TRAIN_SPLIT, transform=valid_tsfm,
-                              target_transform=cfg.DATASET.TARGETTRANSFORM)
-        valid_set = PedesAttr(cfg=cfg, split=cfg.DATASET.VAL_SPLIT, transform=valid_tsfm,
-                              target_transform=cfg.DATASET.TARGETTRANSFORM)
-
-
-    train_loader = DataLoader(
-        dataset=train_set,
-        batch_size=cfg.TRAIN.BATCH_SIZE,
-        shuffle=False,
-        num_workers=4,
-        pin_memory=True,
+    valid_set = dataload.myImageFloder(
+        root=r'D:\KETI\0930_ data\0930_ data\json\all_obj/',
+        label="data/KETI",
+        transform=valid_tsfm,
+        mode='test'
     )
-
-    valid_loader = DataLoader(
-        dataset=valid_set,
-        batch_size=cfg.TRAIN.BATCH_SIZE,
-        shuffle=False,
-        num_workers=4,
-        pin_memory=True,
-    )
-
-    print(f'{cfg.DATASET.TRAIN_SPLIT} set: {len(train_loader.dataset)}, '
-          f'{cfg.DATASET.TEST_SPLIT} set: {len(valid_loader.dataset)}, '
-          f'attr_num : {train_set.attr_num}')
+    valid_loader = torch.utils.data.DataLoader(
+        valid_set,
+        batch_size=128, shuffle=False, num_workers=2)
+    # print(f'{cfg.DATASET.TRAIN_SPLIT} set: {len(train_loader.dataset)}, '
+    #       f'{cfg.DATASET.TEST_SPLIT} set: {len(valid_loader.dataset)}, '
+    #       f'attr_num : {train_set.attr_num}')
 
     backbone, c_output = build_backbone(cfg.BACKBONE.TYPE, cfg.BACKBONE.MULTISCALE)
 
 
     classifier = build_classifier(cfg.CLASSIFIER.NAME)(
-        nattr=train_set.attr_num,
+        nattr=149,
         c_in=c_output,
         bn=cfg.CLASSIFIER.BN,
         pool=cfg.CLASSIFIER.POOLING,
@@ -82,26 +62,53 @@ def main(cfg, args):
 
     model = FeatClassifier(backbone, classifier)
 
+    #
     if torch.cuda.is_available():
         model = torch.nn.DataParallel(model).cuda()
 
-    model = get_reload_weight(model_dir, model, pth='xxxxxxxxxxxxxxx')
-
+    model = get_reload_weight(model_dir, model, pth='KETI_resnet_0.6726672327962699.pkl')
     model.eval()
+    # state_dict = torch.load('KETI_Person_resnet_01_0.5910105720119185.pkl', map_location=torch.device('cpu'))
+    # # state_dict = torch.load('ckpt_max_peta_0.8044293713897043.pkl')
+    #
+    # # create new OrderedDict that does not contain `module.`
+    # from collections import OrderedDict
+    # new_state_dict = OrderedDict()
+    # for k, v in state_dict.items():
+    #     name = k[7:]  # remove `module.`
+    #     new_state_dict[name] = v
+    # # load params
+    # model.load_state_dict(new_state_dict)
+    # model.cuda()
+    # model_ema = ModelEmaV2(
+    #     model, decay=cfg.TRAIN.EMA.DECAY, device='cpu' if cfg.TRAIN.EMA.FORCE_CPU else None)
+    #
+    # state_dict = torch.load('model_ema_0.8093116161616163.pkl')
+
+    # create new OrderedDict that does not contain `module.`
+    # from collections import OrderedDict
+    # new_state_dict = OrderedDict()
+    # for k, v in state_dict.items():
+    #     name = k[7:]  # remove `module.`
+    #     new_state_dict[name] = v
+    # load params
+    # model_ema.load_state_dict(new_state_dict)
+    #
+    # model_ema.module.eval()
+    # model_ema.cuda()
+
     preds_probs = []
     gt_list = []
     path_list = []
 
     attn_list = []
     with torch.no_grad():
-        for step, (imgs, gt_label, imgname) in enumerate(tqdm(valid_loader)):
-            imgs = imgs.cuda()
-            gt_label = gt_label.cuda()
+        for step, (imgs, gt_label) in enumerate(tqdm(valid_loader)):
+            # valid_logits, attns = model_ema.module(imgs, gt_label)
             valid_logits, attns = model(imgs, gt_label)
 
             valid_probs = torch.sigmoid(valid_logits[0])
 
-            path_list.extend(imgname)
             gt_list.append(gt_label.cpu().numpy())
             preds_probs.append(valid_probs.cpu().numpy())
 
@@ -109,7 +116,8 @@ def main(cfg, args):
     gt_label = np.concatenate(gt_list, axis=0)
     preds_probs = np.concatenate(preds_probs, axis=0)
 
-
+    np.savetxt("KETI_resnet_all.csv", preds_probs, delimiter=',')
+    np.savetxt("KETI_resnet_all_GT.csv", gt_label, delimiter=',')
 
     if cfg.METRIC.TYPE == 'pedestrian':
         valid_result = get_pedestrian_metrics(gt_label, preds_probs)
@@ -144,7 +152,8 @@ def argument_parser():
                                      formatter_class=argparse.ArgumentDefaultsHelpFormatter)
 
     parser.add_argument(
-        "--cfg", help="decide which cfg to use", type=str,
+        "--cfg", help="decide which cfg to use", type=str, default="./configs/pedes_baseline/KETI.yaml",
+
     )
     parser.add_argument("--debug", type=str2bool, default="true")
 

@@ -93,7 +93,7 @@ def get_transform(cfg):
             T.Resize((height, width)),
             T.Pad(10),
             T.RandomCrop((height, width)),
-            T.RandomHorizontalFlip(),
+            # T.RandomHorizontalFlip(),
             T.ToTensor(),
             normalize,
         ])
@@ -116,7 +116,7 @@ def get_transform(cfg):
             train_transform = T.Compose([
                 T.RandomApply([AutoAugment()], p=cfg.TRAIN.DATAAUG.AUTOAUG_PROB),
                 T.Resize((height, width), interpolation=3),
-                T.RandomHorizontalFlip(),
+                # T.RandomHorizontalFlip(),
                 T.ToTensor(),
             ])
 
@@ -124,7 +124,7 @@ def get_transform(cfg):
             train_transform = T.Compose([
                 T.Resize((height + 64, width + 64)),
                 MultiScaleCrop(height, scales=(1.0, 0.875, 0.75, 0.66, 0.5), max_distort=2),
-                T.RandomHorizontalFlip(),
+                # T.RandomHorizontalFlip(),
                 T.ToTensor(),
                 normalize
             ])

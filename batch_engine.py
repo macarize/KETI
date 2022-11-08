@@ -9,6 +9,11 @@ from tqdm import tqdm
 from tools.distributed import reduce_tensor
 from tools.utils import AverageMeter, to_scalar, time_str
 
+import torchvision
+
+import scipy.io as scio
+import torchvision.transforms as transforms
+import matplotlib.pyplot as plt
 
 def logits4pred(criterion, logits_list):
     if criterion.__class__.__name__.lower() in ['bceloss']:
@@ -36,21 +41,29 @@ def batch_trainer(cfg, args, epoch, model, model_ema, train_loader, criterion, o
 
     lr = optimizer.param_groups[1]['lr']
 
-    for step, (imgs, gt_label) in enumerate(train_loader):
+    for step, (imgs, gt_label, class_idx) in enumerate(train_loader):
         iter_num = epoch * len(train_loader) + step
 
         batch_time = time.time()
         imgs, gt_label = imgs.cuda(), gt_label.cuda()
         train_logits, feat = model(imgs, gt_label)
 
-
-        loss_list, loss_mtr = criterion(train_logits, gt_label)
+        # grid = torchvision.utils.make_grid(imgs)
+        # plt.imshow(grid.detach().cpu().numpy().transpose(1, 2, 0))
+        # plt.title("bat")
+        # plt.show()
+        #
+        #
+        # print(train_logits[0][0])
+        # print(gt_label[0])
+        loss_list, loss_mtr = criterion(class_idx, train_logits, gt_label)
 
         train_loss = 0
 
         for i, l in enumerate(loss_w):
             train_loss += loss_list[i] * l
-
+        # print(train_loss.item())
+        # print(train_logits)
         optimizer.zero_grad()
         train_loss.backward()
         # for name, param in model.named_parameters():
@@ -124,7 +137,7 @@ def valid_trainer(cfg, args, epoch, model, valid_loader, criterion, loss_w=[1, ]
     loss_mtr_list = []
 
     with torch.no_grad():
-        for step, (imgs, gt_label) in enumerate(tqdm(valid_loader)):
+        for step, (imgs, gt_label, class_idx) in enumerate(tqdm(valid_loader)):
             imgs = imgs.cuda()
             gt_label = gt_label.cuda()
             gt_list.append(gt_label.cpu().numpy())
@@ -132,7 +145,7 @@ def valid_trainer(cfg, args, epoch, model, valid_loader, criterion, loss_w=[1, ]
             valid_logits, feat = model(imgs, gt_label)
 
 
-            loss_list, loss_mtr = criterion(valid_logits, gt_label)
+            loss_list, loss_mtr = criterion(class_idx, valid_logits, gt_label)
             valid_loss = 0
             for i, l in enumerate(loss_list):
                 valid_loss += loss_w[i] * l

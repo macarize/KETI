@@ -11,6 +11,17 @@ import torchvision.transforms as transforms
 import numpy as np
 
 
+from ctypes import wintypes, windll
+from functools import cmp_to_key
+
+def winsort(data):
+    _StrCmpLogicalW = windll.Shlwapi.StrCmpLogicalW
+    _StrCmpLogicalW.argtypes = [wintypes.LPWSTR, wintypes.LPWSTR]
+    _StrCmpLogicalW.restype  = wintypes.INT
+
+    cmp_fnc = lambda psz1, psz2: _StrCmpLogicalW(psz1, psz2)
+    return sorted(data, key=cmp_to_key(cmp_fnc))
+
 def default_loader(path):
     return Image.open(path).convert('RGB')
 
@@ -27,8 +38,12 @@ class myImageFloder(data.Dataset):
         '''edited'''
         imgs = []
         if mode == 'train':
-            img_files = os.listdir('data/KETI/train_val')
-            anno_file = np.loadtxt("data/KETI/train_val.csv", dtype=int, delimiter=',')
+            img_files = os.listdir(root)
+            img_files = winsort(img_files)
+            class_idx = np.loadtxt('classes_ids.csv', dtype=int, delimiter=',')
+            class_idx = class_idx[:141096]
+            img_files = img_files[:141096]
+            anno_file = np.loadtxt("data/KETI/train_all.csv", dtype=int, delimiter=',')
 
             # testlabel = fn['train_label']
             # testimg = fn['train_images_name']
@@ -38,8 +53,12 @@ class myImageFloder(data.Dataset):
         if mode == 'test':
             # testlabel = fn['test_label']
             # testimg = fn['test_images_name']
-            img_files = os.listdir('data/KETI/test')
-            anno_file = np.loadtxt("data/KETI/test.csv", dtype=int, delimiter=',')
+            img_files = os.listdir(root)
+            img_files = winsort(img_files)
+            img_files = img_files[141096:]
+            class_idx = np.loadtxt('classes_ids.csv', dtype=int, delimiter=',')
+            class_idx = class_idx[141096:]
+            anno_file = np.loadtxt("data/KETI/test_all.csv", dtype=int, delimiter=',')
 
             # testlabel = fn['train_label']
             # testimg = fn['train_images_name']
@@ -50,14 +69,15 @@ class myImageFloder(data.Dataset):
         #     testlabel = fn['val_label']
         #     testimg = fn['val_images_name']
         count = 0
+        print(len(testimg))
         for name in testimg:
             # print(name)
             if mode == 'train':
-                if os.path.isfile('data/KETI/train_val/' + name):
-                    imgs.append((name, testlabel[count]))
+                if os.path.isfile(root + '/' + name):
+                    imgs.append((name, testlabel[count], class_idx[count]))
             elif mode == 'test':
-                if os.path.isfile('data/KETI/test/' + name):
-                    imgs.append((name, testlabel[count]))
+                if os.path.isfile(root + '/' + name):
+                    imgs.append((name, testlabel[count], class_idx[count]))
             count = count + 1
         self.label = testlabel
         self.root = root
@@ -67,11 +87,11 @@ class myImageFloder(data.Dataset):
         self.loader = loader
 
     def __getitem__(self, index):
-        filename, label = self.imgs[index]
+        filename, label, class_idx = self.imgs[index]
         img = self.loader(os.path.join(self.root, filename))
         if self.transform is not None:
             img = self.transform(img)
-        return img, torch.Tensor(label)  # todo: for testing visualization, it needs filename
+        return img, torch.Tensor(label), class_idx  # todo: for testing visualization, it needs filename
 
     def __len__(self):
         return len(self.imgs)

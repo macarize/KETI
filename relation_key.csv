@@ -1,0 +1,194 @@
+Relationship,-,sem_relation,hit,11001
+Relationship,-,sem_relation,use,11002
+Relationship,-,sem_relation,wear,11003
+Relationship,-,sem_relation,take_a_picture,11004
+Relationship,-,sem_relation,come_out,11005
+Relationship,-,sem_relation,reach,11006
+Relationship,-,sem_relation,ride,11007
+Relationship,-,sem_relation,catch,11008
+Relationship,-,sem_relation,lean_in,11009
+Relationship,-,sem_relation,come_in,11010
+Relationship,-,sem_relation,throw,11011
+Relationship,-,sem_relation,drive,11012
+Relationship,-,sem_relation,talk_to,11013
+Relationship,-,sem_relation,pull,11014
+Relationship,-,sem_relation,unload,11015
+Relationship,-,sem_relation,lie_on,11016
+Relationship,-,sem_relation,sit,11017
+Relationship,-,sem_relation,row,11018
+Relationship,-,sem_relation,follow,11019
+Relationship,-,sem_relation,wipe,11020
+Relationship,-,sem_relation,see,11021
+Relationship,-,sem_relation,lift,11022
+Relationship,-,sem_relation,eat,11023
+Relationship,-,sem_relation,push,11024
+Relationship,-,sem_relation,hang,11025
+Relationship,-,sem_relation,load,11026
+Relationship,-,sem_relation,pass_through,11027
+Relationship,-,sem_relation,walk,11028
+Relationship,-,sem_relation,bite,11029
+Relationship,-,sem_relation,put_in,11030
+Relationship,-,sem_relation,stand,11031
+Relationship,-,sem_relation,stack,11032
+Relationship,-,sem_relation,hold,11033
+Relationship,-,sem_relation,stab,11034
+Relationship,-,sem_relation,surrond,11035
+Relationship,-,sem_relation,reflect,11036
+Relationship,-,sem_relation,get_stuck,11037
+Relationship,-,geo_relation,inside,12001
+Relationship,-,geo_relation,outside,12002
+Relationship,-,geo_relation,front,12003
+Relationship,-,geo_relation,rear,12004
+Relationship,-,geo_relation,left,12005
+Relationship,-,geo_relation,right,12006
+Relationship,-,geo_relation,upper,12007
+Relationship,-,geo_relation,lower,12008
+Attirbutes,semantic attributes,instance_type,male,21101
+Attirbutes,semantic attributes,instance_type,female,21102
+Attirbutes,semantic attributes,instance_type,child,21103
+Attirbutes,semantic attributes,instance_type,baby,21104
+Attirbutes,semantic attributes,instance_type,sailer,21105
+Attirbutes,semantic attributes,instance_type,canoe,21106
+Attirbutes,semantic attributes,instance_type,police_car,21107
+Attirbutes,semantic attributes,instance_type,toy,21108
+Attirbutes,semantic attributes,instance_type,fire_truck,21109
+Attirbutes,semantic attributes,instance_type,light_aircraft,21110
+Attirbutes,semantic attributes,instance_type,lorry,21111
+Attirbutes,semantic attributes,instance_type,cargo_ship,21112
+Attirbutes,semantic attributes,instance_type,passenger_ship,21113
+Attirbutes,semantic attributes,instance_type,yacht,21114
+Attirbutes,semantic attributes,instance_type,ambulance,21115
+Attirbutes,semantic attributes,instance_type,fighter_plane,21116
+Attirbutes,semantic attributes,instance_type,dessert,21117
+Attirbutes,semantic attributes,status,bending,21201
+Attirbutes,semantic attributes,status,crossing_legs,21202
+Attirbutes,semantic attributes,status,drinking,21203
+Attirbutes,semantic attributes,status,lying,21204
+Attirbutes,semantic attributes,status,smoking,21205
+Attirbutes,semantic attributes,status,eating,21206
+Attirbutes,semantic attributes,status,jumping,21207
+Attirbutes,semantic attributes,status,kneel_down,21208
+Attirbutes,semantic attributes,status,running,21209
+Attirbutes,semantic attributes,status,smiling,21210
+Attirbutes,semantic attributes,status,taking_picture,21211
+Attirbutes,semantic attributes,status,hand_up,21212
+Attirbutes,semantic attributes,status,sitting,21213
+Attirbutes,semantic attributes,status,standing,21214
+Attirbutes,semantic attributes,status,walking,21215
+Attirbutes,semantic attributes,status,leaning,21216
+Attirbutes,semantic attributes,status,lighting_on,21217
+Attirbutes,semantic attributes,status,flying,21218
+Attirbutes,semantic attributes,status,starting,21219
+Attirbutes,semantic attributes,status,wagging_tail,21220
+Attirbutes,semantic attributes,status,bound,21221
+Attirbutes,semantic attributes,status,full,21222
+Attirbutes,semantic attributes,status,empty,21223
+Attirbutes,semantic attributes,status,opened,21224
+Attirbutes,semantic attributes,status,closed,21225
+Attirbutes,semantic attributes,status,folded,21226
+Attirbutes,semantic attributes,status,unfolded,21227
+Attirbutes,semantic attributes,status,upside_down,21228
+Attirbutes,semantic attributes,status,leaned,21229
+Attirbutes,semantic attributes,status,power_on,21230
+Attirbutes,semantic attributes,status,power_off,21231
+Attirbutes,semantic attributes,status,filled,21232
+Attirbutes,semantic attributes,status,bare,21233
+Attirbutes,semantic attributes,status,leafy,21234
+Attirbutes,semantic attributes,status,arched,21235
+Attirbutes,semantic attributes,status,wrinkled,21236
+Attirbutes,semantic attributes,status,rusty,21237
+Attirbutes,semantic attributes,status,attached,21238
+Attirbutes,semantic attributes,status,flowing,21239
+Attirbutes,semantic attributes,status,suspended,21240
+Attirbutes,semantic attributes,status,prostrate,21241
+Attirbutes,semantic attributes,part,wearing_a_helmet,21301
+Attirbutes,semantic attributes,part,wearing_a_mask,21302
+Attirbutes,semantic attributes,part,wearing_shorts,21303
+Attirbutes,semantic attributes,part,wearing_swimsuit,21304
+Attirbutes,semantic attributes,part,wearing_a_blouse,21305
+Attirbutes,semantic attributes,part,wearing_a_scarf,21306
+Attirbutes,semantic attributes,part,wearing_jeans,21307
+Attirbutes,semantic attributes,part,wearing_a_baseball_uniform,21308
+Attirbutes,semantic attributes,part,wearing_a_cap,21309
+Attirbutes,semantic attributes,part,wearing_glasses,21310
+Attirbutes,semantic attributes,part,wearing_a_shirt,21311
+Attirbutes,semantic attributes,part,wearing_a_bracelet,21312
+Attirbutes,semantic attributes,part,wearing_a_necklace,21313
+Attirbutes,semantic attributes,part,wearing_shoes,21314
+Attirbutes,semantic attributes,part,wearing_slipper,21315
+Attirbutes,semantic attributes,part,wearing_sunglasses,21316
+Attirbutes,semantic attributes,part,wearing_a_T-shirt,21317
+Attirbutes,semantic attributes,part,with_window,21318
+Attirbutes,semantic attributes,part,with_windshield,21359
+Attirbutes,semantic attributes,part,with_window,21318
+Attirbutes,semantic attributes,part,with_flag,21319
+Attirbutes,semantic attributes,part,with_oar,21320
+Attirbutes,semantic attributes,part,with_sail,21321
+Attirbutes,semantic attributes,part,with_rearview_mirror,21322
+Attirbutes,semantic attributes,part,with_license_plate,21323
+Attirbutes,semantic attributes,part,with_propeller,21324
+Attirbutes,semantic attributes,part,with_saddle,21325
+Attirbutes,semantic attributes,part,with_a_chair,21326
+Attirbutes,semantic attributes,part,with_handle,21327
+Attirbutes,semantic attributes,part,with_headlights,21328
+Attirbutes,semantic attributes,part,with_sticker,21329
+Attirbutes,semantic attributes,part,with_wheels,21330
+Attirbutes,semantic attributes,part,with_straw,21331
+Attirbutes,semantic attributes,part,branched,21332
+Attirbutes,semantic attributes,part,with_tail,21333
+Attirbutes,semantic attributes,part,with_flower,21334
+Attirbutes,semantic attributes,part,with_armrests,21335
+Attirbutes,semantic attributes,part,line_connected,21336
+Attirbutes,semantic attributes,part,with_faucet,21337
+Attirbutes,semantic attributes,part,with_backrest,21338
+Attirbutes,semantic attributes,part,with_lid,21339
+Attirbutes,semantic attributes,part,with_coaster,21340
+Attirbutes,semantic attributes,part,with_button,21341
+Attirbutes,semantic attributes,part,with_root,21342
+Attirbutes,semantic attributes,part,with_clock_hands,21343
+Attirbutes,semantic attributes,part,with_antenna,21344
+Attirbutes,semantic attributes,part,with_cushions,21345
+Attirbutes,semantic attributes,part,with_screen,21346
+Attirbutes,semantic attributes,part,with_signage,21347
+Attirbutes,semantic attributes,part,with_clouds,21348
+Attirbutes,semantic attributes,part,with_chimney,21349
+Attirbutes,semantic attributes,part,pillared,21350
+Attirbutes,semantic attributes,part,illuminated,21351
+Attirbutes,semantic attributes,part,with_rocks,21352
+Attirbutes,semantic attributes,part,with_bricks,21353
+Attirbutes,semantic attributes,part,with_a_terrace,21354
+Attirbutes,semantic attributes,part,grassed,21355
+Attirbutes,semantic attributes,part,with_a_roof,21356
+Attirbutes,semantic attributes,part,with_crosswalk,21357
+Attirbutes,semantic attributes,part,wave_crashing,21358
+Attirbutes,semantic attributes,texture-material,metalic,21401
+Attirbutes,semantic attributes,texture-material,plastic,21402
+Attirbutes,semantic attributes,texture-material,wooden,21403
+Attirbutes,semantic attributes,texture-material,rubber,21404
+Attirbutes,semantic attributes,texture-material,fabric,21405
+Attirbutes,semantic attributes,texture-material,leather,21406
+Attirbutes,semantic attributes,texture-material,paper,21407
+Attirbutes,semantic attributes,texture-material,glass,21408
+Attirbutes,semantic attributes,texture-material,seramic,21409
+Attirbutes,semantic attributes,texture-material,stone,21410
+Attirbutes,semantic attributes,texture-material,concrete,21411
+Attirbutes,semantic attributes,texture-status,dirty,21501
+Attirbutes,semantic attributes,texture-status,colorful,21502
+Attirbutes,semantic attributes,texture-status,shiny,21503
+Attirbutes,semantic attributes,texture-status,solid,21504
+Attirbutes,semantic attributes,texture-status,striped,21505
+Attirbutes,semantic attributes,texture-status,transparent,21506
+Attirbutes,semantic attributes,texture-status,smooth,21507
+Attirbutes,semantic attributes,texture-status,fluffy,21508
+Attirbutes,semantic attributes,texture-status,cracked,21509
+Attirbutes,semantic attributes,texture-status,with_label,21510
+Attirbutes,semantic attributes,texture-status,shining,21511
+Attirbutes,semantic attributes,texture-status,snowy,21512
+Attirbutes,semantic attributes,texture-status,with_a_hole,21513
+Attirbutes,semantic attributes,texture-status,painted,21514
+Attirbutes,-,geo_attribute,Side-view,22001
+Attirbutes,-,geo_attribute,Front-view,22002
+Attirbutes,-,geo_attribute,Rear-view,22003
+Attirbutes,-,geo_attribute,Upper-view,22004
+Attirbutes,-,geo_attribute,Lower-view,22005
+Attirbutes,-,geo_attribute,unknown,22006

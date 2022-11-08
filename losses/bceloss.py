@@ -15,9 +15,9 @@ class BCELoss(nn.Module):
         self.sample_weight = sample_weight
         self.size_sum = size_sum
         self.hyper = 0.8
-        self.smoothing = None
+        self.smoothing = 0.3
 
-    def forward(self, logits, targets):
+    def forward(self, obj_id, logits, targets):
         logits = logits[0]
 
         if self.smoothing is not None:
@@ -27,8 +27,7 @@ class BCELoss(nn.Module):
 
         targets_mask = torch.where(targets.detach().cpu() > 0.5, torch.ones(1), torch.zeros(1))
         if self.sample_weight is not None:
-            sample_weight = ratio2weight(targets_mask, self.sample_weight)
-
+            sample_weight = ratio2weight(targets_mask, self.sample_weight[obj_id])
             loss_m = (loss_m * sample_weight.cuda())
 
         # losses = loss_m.sum(1).mean() if self.size_sum else loss_m.mean()

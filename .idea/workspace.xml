@@ -61,13 +61,13 @@
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/models/backbone/resnet.py" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/models/backbone/bninception.py" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/train.py" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/models/registry.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/models/backbone/swin_transformer.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/models/backbone/bninception.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/models/backbone/resnet.py" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/models/model_factory.py" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/models/backbone/vit.py" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/models/backbone/swin_transformer.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/models/registry.py" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IgnoredFileRootStore">
     <option name="generatedRoots">
@@ -97,7 +97,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="credentialsType com.jetbrains.python.remote.PyCreateRemoteInterpreterDialog$PyCreateRemoteSdkForm" value="SSH Configuration" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/configs/pedes_baseline" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -123,11 +123,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Rethinking_of_PAR-master (2)\Rethinking_of_PAR-master\configs\pedes_baseline" />
-      <recent name="D:\Rethinking_of_PAR-master (2)\Rethinking_of_PAR-master\COCO\data\annotations" />
-      <recent name="$PROJECT_DIR$/configs/multilabel_baseline" />
-      <recent name="$PROJECT_DIR$/models/backbone" />
-      <recent name="$PROJECT_DIR$" />
+      <recent name="D:\Rethinking_of_PAR-master (2)\Rethinking_of_PAR-master" />
+      <recent name="D:\Rethinking_of_PAR-master (2)\Rethinking_of_PAR-master\weight_elem" />
+      <recent name="D:\Rethinking_of_PAR-master (2)\Rethinking_of_PAR-master\exp_result\KETI\resnet50.base.adam\img_model" />
+      <recent name="D:\Rethinking_of_PAR-master (2)\Rethinking_of_PAR-master\exp_result\PA100k\resnet50.base.adam\img_model" />
+      <recent name="D:\Rethinking_of_PAR-master (2)\Rethinking_of_PAR-master\data\KETI" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/configs/multilabel_baseline" />
@@ -137,29 +137,7 @@
       <recent name="$PROJECT_DIR$/models/MultiLabel" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.train">
-    <configuration name="COCO" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Rethinking_of_PAR" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="sshConfig://general/home/jiajian/anaconda3/envs/torch17/bin/python" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/COCO.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.plot">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="Rethinking_of_PAR" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -182,50 +160,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="cos_annealing_with_restart" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Rethinking_of_PAR" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="sshConfig://general/home/jiajian/anaconda3/envs/torch17/bin/python" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scheduler" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scheduler/cos_annealing_with_restart.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="dataload" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Rethinking_of_PAR" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="sshConfig://general/home/jiajian/anaconda3/envs/torch17/bin/python" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/dataload.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="infer" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Rethinking_of_PAR" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -240,6 +174,72 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/infer.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pedestrian_metrics" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Rethinking_of_PAR" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="sshConfig://general/home/jiajian/anaconda3/envs/torch17/bin/python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/metrics" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/metrics/pedestrian_metrics.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="plot" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Rethinking_of_PAR" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="sshConfig://general/home/jiajian/anaconda3/envs/torch17/bin/python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/plot.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="sample_weight" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Rethinking_of_PAR" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="sshConfig://general/home/jiajian/anaconda3/envs/torch17/bin/python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sample_weight.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -295,18 +295,18 @@
     <list>
       <item itemvalue="Python.swin_orig" />
       <item itemvalue="Python.train" />
-      <item itemvalue="Python.cos_annealing_with_restart" />
       <item itemvalue="Python.infer" />
-      <item itemvalue="Python.COCO" />
-      <item itemvalue="Python.dataload" />
+      <item itemvalue="Python.pedestrian_metrics" />
+      <item itemvalue="Python.sample_weight" />
+      <item itemvalue="Python.plot" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.plot" />
         <item itemvalue="Python.train" />
-        <item itemvalue="Python.dataload" />
-        <item itemvalue="Python.COCO" />
+        <item itemvalue="Python.sample_weight" />
         <item itemvalue="Python.infer" />
-        <item itemvalue="Python.cos_annealing_with_restart" />
+        <item itemvalue="Python.pedestrian_metrics" />
       </list>
     </recent_temporary>
   </component>
@@ -428,7 +428,11 @@
       <workItem from="1666169544660" duration="111000" />
       <workItem from="1666170201713" duration="19000" />
       <workItem from="1666170237902" duration="723000" />
-      <workItem from="1666242232179" duration="13707000" />
+      <workItem from="1666242232179" duration="16005000" />
+      <workItem from="1666678014818" duration="25514000" />
+      <workItem from="1666780817716" duration="7745000" />
+      <workItem from="1666807265953" duration="38639000" />
+      <workItem from="1667460653569" duration="11707000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1590195033606</created>
@@ -811,6 +815,13 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/gt_plot.py</url>
+          <line>21</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
           <properties notifyOnTerminate="true" exception="BaseException">
@@ -821,48 +832,55 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Rethinking_of_PAR_master$gt_plot.coverage" NAME="gt_plot Coverage Results" MODIFIED="1667288715305" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Jian_Pedestrian_Attribute_Recognition$DynamicSem.coverage" NAME="DynamicSem Coverage Results" MODIFIED="1610970269546" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/models" />
-    <SUITE FILE_PATH="coverage/Jian_Pedestrian_Attribute_Recognition$infer.coverage" NAME="infer Coverage Results" MODIFIED="1635781079976" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Jian_Pedestrian_Attribute_Recognition$cosine_lr.coverage" NAME="cosine_lr Coverage Results" MODIFIED="1615469746432" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scheduler" />
-    <SUITE FILE_PATH="coverage/Jian_Pedestrian_Attribute_Recognition$format_rap2.coverage" NAME="format_rap2 Coverage Results" MODIFIED="1622705673053" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dataset/pedes_attr/preprocess" />
-    <SUITE FILE_PATH="coverage/Jian_Pedestrian_Attribute_Recognition$rednet.coverage" NAME="rednet Coverage Results" MODIFIED="1617085408525" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/models/backbone/rednet" />
-    <SUITE FILE_PATH="coverage/Baseline_of_Pedestrian_Attribute_Recognition$train.coverage" NAME="train Coverage Results" MODIFIED="1599900786906" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Rethinking_of_PAR_master$part_to_all.coverage" NAME="part_to_all Coverage Results" MODIFIED="1667287337653" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Jian_Pedestrian_Attribute_Recognition$hrnet.coverage" NAME="hrnet Coverage Results" MODIFIED="1626143120958" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/models/backbone" />
-    <SUITE FILE_PATH="coverage/Jian_Pedestrian_Attribute_Recognition$train.coverage" NAME="train Coverage Results" MODIFIED="1637027635865" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Rethinking_of_PAR_master$plot.coverage" NAME="plot Coverage Results" MODIFIED="1667801364106" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Rethinking_of_PAR$infer.coverage" NAME="infer Coverage Results" MODIFIED="1637911092676" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Jian_Pedestrian_Attribute_Recognition$format_pa100k.coverage" NAME="format_pa100k Coverage Results" MODIFIED="1614157689533" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dataset/pedes_attr/preprocess" />
-    <SUITE FILE_PATH="coverage/Rethinking_of_PAR$cos_annealing_with_restart.coverage" NAME="cos_annealing_with_restart Coverage Results" MODIFIED="1637906613318" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scheduler" />
-    <SUITE FILE_PATH="coverage/Baseline_of_Pedestrian_Attribute_Recognition$JLAC.coverage" NAME="JLAC Coverage Results" MODIFIED="1599484839060" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/models/reimp" />
     <SUITE FILE_PATH="coverage/Jian_Pedestrian_Attribute_Recognition$swin_orig.coverage" NAME="swin_orig Coverage Results" MODIFIED="1636616390375" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/models/backbone" />
     <SUITE FILE_PATH="coverage/Rethinking_of_PAR_master$COCO.coverage" NAME="COCO Coverage Results" MODIFIED="1664436304259" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Jian_Pedestrian_Attribute_Recognition$grad_cam.coverage" NAME="grad_cam Coverage Results" MODIFIED="1602311844088" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Jian_Pedestrian_Attribute_Recognition$base_block.coverage" NAME="base_block Coverage Results" MODIFIED="1609986556987" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/models" />
+    <SUITE FILE_PATH="coverage/Rethinking_of_PAR_master$pedestrian_metrics.coverage" NAME="pedestrian_metrics Coverage Results" MODIFIED="1667454208568" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/metrics" />
     <SUITE FILE_PATH="coverage/Baseline_of_Pedestrian_Attribute_Recognition$onnx.coverage" NAME="onnx Coverage Results" MODIFIED="1597630509076" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools" />
-    <SUITE FILE_PATH="coverage/Rethinking_of_PAR_master$dataload.coverage" NAME="dataload Coverage Results" MODIFIED="1666166896321" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Jian_Pedestrian_Attribute_Recognition$utils.coverage" NAME="utils Coverage Results" MODIFIED="1634788515317" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools" />
-    <SUITE FILE_PATH="coverage/Jian_Pedestrian_Attribute_Recognition$format_peta.coverage" NAME="format_peta Coverage Results" MODIFIED="1622075288706" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dataset/pedes_attr/preprocess" />
-    <SUITE FILE_PATH="coverage/Jian_Pedestrian_Attribute_Recognition$CE_loss.coverage" NAME="CE_loss Coverage Results" MODIFIED="1600074707075" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/loss" />
     <SUITE FILE_PATH="coverage/Jian_Pedestrian_Attribute_Recognition$gcnet.coverage" NAME="gcnet Coverage Results" MODIFIED="1601017711626" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/models/backbone" />
-    <SUITE FILE_PATH="coverage/Jian_Pedestrian_Attribute_Recognition$resnet.coverage" NAME="resnet Coverage Results" MODIFIED="1614212836782" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/models/backbone" />
     <SUITE FILE_PATH="coverage/Baseline_of_Pedestrian_Attribute_Recognition$ImageNet.coverage" NAME="imagenet_valid Coverage Results" MODIFIED="1599013643258" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Jian_Pedestrian_Attribute_Recognition$demo.coverage" NAME="demo Coverage Results" MODIFIED="1609232269964" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Baseline_of_Pedestrian_Attribute_Recognition$format_rap.coverage" NAME="format_rap Coverage Results" MODIFIED="1590195240082" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/datasets/preprocess" />
     <SUITE FILE_PATH="coverage/Jian_Pedestrian_Attribute_Recognition$format_rap.coverage" NAME="format_rap Coverage Results" MODIFIED="1608689034133" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dataset/pedestrian_attr/preprocess" />
-    <SUITE FILE_PATH="coverage/Jian_Pedestrian_Attribute_Recognition$swin_transformer.coverage" NAME="swin_transformer Coverage Results" MODIFIED="1636684281382" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/models/backbone" />
     <SUITE FILE_PATH="coverage/Baseline_of_Pedestrian_Attribute_Recognition$format_pa100k.coverage" NAME="format_pa100k Coverage Results" MODIFIED="1590195133064" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/datasets/preprocess" />
-    <SUITE FILE_PATH="coverage/Rethinking_of_PAR$model_factory.coverage" NAME="model_factory Coverage Results" MODIFIED="1637846624121" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/models" />
     <SUITE FILE_PATH="coverage/Jian_Pedestrian_Attribute_Recognition$vit.coverage" NAME="vit Coverage Results" MODIFIED="1636781150055" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/models/backbone" />
-    <SUITE FILE_PATH="coverage/Baseline_of_Pedestrian_Attribute_Recognition$infer.coverage" NAME="infer Coverage Results" MODIFIED="1599809530968" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Rethinking_of_PAR$train.coverage" NAME="train Coverage Results" MODIFIED="1637976518964" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Rethinking_of_PAR_master$train.coverage" NAME="train Coverage Results" MODIFIED="1666332241535" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Baseline_of_Pedestrian_Attribute_Recognition$format_rap2.coverage" NAME="format_rap2 Coverage Results" MODIFIED="1590195289105" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/datasets/preprocess" />
+    <SUITE FILE_PATH="coverage/Jian_Pedestrian_Attribute_Recognition$speed.coverage" NAME="speed Coverage Results" MODIFIED="1636622421529" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools" />
+    <SUITE FILE_PATH="coverage/Jian_Pedestrian_Attribute_Recognition$EXPresnet.coverage" NAME="EXPresnet Coverage Results" MODIFIED="1614237814739" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/models/backbone" />
+    <SUITE FILE_PATH="coverage/Baseline_of_Pedestrian_Attribute_Recognition$format_peta.coverage" NAME="format_peta Coverage Results" MODIFIED="1590195231749" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/datasets/preprocess" />
+    <SUITE FILE_PATH="coverage/Jian_Pedestrian_Attribute_Recognition$infer.coverage" NAME="infer Coverage Results" MODIFIED="1635781079976" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Jian_Pedestrian_Attribute_Recognition$cosine_lr.coverage" NAME="cosine_lr Coverage Results" MODIFIED="1615469746432" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scheduler" />
+    <SUITE FILE_PATH="coverage/Rethinking_of_PAR_master$infer.coverage" NAME="infer Coverage Results" MODIFIED="1667454821957" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Jian_Pedestrian_Attribute_Recognition$format_rap2.coverage" NAME="format_rap2 Coverage Results" MODIFIED="1622705673053" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dataset/pedes_attr/preprocess" />
+    <SUITE FILE_PATH="coverage/Jian_Pedestrian_Attribute_Recognition$rednet.coverage" NAME="rednet Coverage Results" MODIFIED="1617085408525" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/models/backbone/rednet" />
+    <SUITE FILE_PATH="coverage/Rethinking_of_PAR_master$infer_KETI.coverage" NAME="infer_KETI Coverage Results" MODIFIED="1667374311696" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Baseline_of_Pedestrian_Attribute_Recognition$train.coverage" NAME="train Coverage Results" MODIFIED="1599900786906" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Jian_Pedestrian_Attribute_Recognition$train.coverage" NAME="train Coverage Results" MODIFIED="1637027635865" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Jian_Pedestrian_Attribute_Recognition$format_pa100k.coverage" NAME="format_pa100k Coverage Results" MODIFIED="1614157689533" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dataset/pedes_attr/preprocess" />
+    <SUITE FILE_PATH="coverage/Rethinking_of_PAR$cos_annealing_with_restart.coverage" NAME="cos_annealing_with_restart Coverage Results" MODIFIED="1637906613318" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scheduler" />
+    <SUITE FILE_PATH="coverage/Baseline_of_Pedestrian_Attribute_Recognition$JLAC.coverage" NAME="JLAC Coverage Results" MODIFIED="1599484839060" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/models/reimp" />
+    <SUITE FILE_PATH="coverage/Rethinking_of_PAR_master$dataload.coverage" NAME="dataload Coverage Results" MODIFIED="1666166896321" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Jian_Pedestrian_Attribute_Recognition$format_peta.coverage" NAME="format_peta Coverage Results" MODIFIED="1622075288706" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/dataset/pedes_attr/preprocess" />
+    <SUITE FILE_PATH="coverage/Jian_Pedestrian_Attribute_Recognition$CE_loss.coverage" NAME="CE_loss Coverage Results" MODIFIED="1600074707075" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/loss" />
+    <SUITE FILE_PATH="coverage/Jian_Pedestrian_Attribute_Recognition$resnet.coverage" NAME="resnet Coverage Results" MODIFIED="1614212836782" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/models/backbone" />
+    <SUITE FILE_PATH="coverage/Baseline_of_Pedestrian_Attribute_Recognition$format_rap.coverage" NAME="format_rap Coverage Results" MODIFIED="1590195240082" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/datasets/preprocess" />
+    <SUITE FILE_PATH="coverage/Jian_Pedestrian_Attribute_Recognition$swin_transformer.coverage" NAME="swin_transformer Coverage Results" MODIFIED="1636684281382" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/models/backbone" />
+    <SUITE FILE_PATH="coverage/Rethinking_of_PAR$model_factory.coverage" NAME="model_factory Coverage Results" MODIFIED="1637846624121" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/models" />
+    <SUITE FILE_PATH="coverage/Baseline_of_Pedestrian_Attribute_Recognition$infer.coverage" NAME="infer Coverage Results" MODIFIED="1599809530968" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Rethinking_of_PAR_master$sample_weight.coverage" NAME="sample_weight Coverage Results" MODIFIED="1667461955966" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Rethinking_of_PAR_master$train.coverage" NAME="train Coverage Results" MODIFIED="1667473061517" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Jian_Pedestrian_Attribute_Recognition$tresnet.coverage" NAME="tresnet Coverage Results" MODIFIED="1636851029326" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/models/backbone/tresnet" />
     <SUITE FILE_PATH="coverage/Jian_Pedestrian_Attribute_Recognition$model_factory.coverage" NAME="model_factory Coverage Results" MODIFIED="1621987240288" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/models" />
-    <SUITE FILE_PATH="coverage/Jian_Pedestrian_Attribute_Recognition$speed.coverage" NAME="speed Coverage Results" MODIFIED="1636622421529" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tools" />
     <SUITE FILE_PATH="coverage/Jian_Pedestrian_Attribute_Recognition$cam.coverage" NAME="cam Coverage Results" MODIFIED="1631430413005" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Jian_Pedestrian_Attribute_Recognition$EXPresnet.coverage" NAME="EXPresnet Coverage Results" MODIFIED="1614237814739" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/models/backbone" />
     <SUITE FILE_PATH="coverage/Jian_Pedestrian_Attribute_Recognition$ASLLoss.coverage" NAME="ASLLoss Coverage Results" MODIFIED="1601522410167" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/loss" />
-    <SUITE FILE_PATH="coverage/Baseline_of_Pedestrian_Attribute_Recognition$format_peta.coverage" NAME="format_peta Coverage Results" MODIFIED="1590195231749" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/datasets/preprocess" />
   </component>
   <component name="hg4idea.settings">
     <option name="CHECK_INCOMING_OUTGOING" value="true" />

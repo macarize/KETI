@@ -582,7 +582,7 @@ def load_pretrained(model, model_path):
     model.load_state_dict(state_dict, strict=True)
 
 @BACKBONE.register("swin_s")
-def Swin_S(pretrain='/mnt/data1/jiajian/code/checkpoints/swin_small_patch4_window7_224.pth'):
+def Swin_S(pretrain='swin_small_patch4_window7_224.pth'):
     return SwinTransformer(pretrain=pretrain, embed_dim=96, depths=[2, 2, 18, 2], num_heads=[3, 6, 12, 24],)
 @BACKBONE.register("swin_b")
 def Swin_B(pretrain='/mnt/data1/jiajian/code/checkpoints/swin_base_patch4_window7_224.pth'):

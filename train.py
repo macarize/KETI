@@ -133,24 +133,24 @@ def main(cfg, args):
     #     pin_memory=True,
     # )
     train_set = dataload.myImageFloder(
-        root="data/KETI/train_val",
+        root=r'D:\KETI\0930_ data\0930_ data\json\all_obj',
         label="data/KETI",
         transform=train_tsfm,
         mode='train'
     )
 
     valid_set = dataload.myImageFloder(
-        root="data/KETI/test",
+        root=r'D:\KETI\0930_ data\0930_ data\json\all_obj',
         label="data/KETI",
         transform=valid_tsfm,
         mode='test'
     )
     train_loader = torch.utils.data.DataLoader(
         train_set,
-        batch_size=64, shuffle=False, num_workers=2)
+        batch_size=128, shuffle=True, num_workers=4)
     valid_loader = torch.utils.data.DataLoader(
         valid_set,
-        batch_size=64, shuffle=False, num_workers=2)
+        batch_size=128, shuffle=True, num_workers=4)
     if args.local_rank == 0:
         print('-' * 60)
         print(
@@ -159,8 +159,9 @@ def main(cfg, args):
               )
 
     labels = train_set.label
-    label_ratio = labels.mean(0) if cfg.LOSS.SAMPLE_WEIGHT else None
-
+    # label_ratio = labels.mean(0) if cfg.LOSS.SAMPLE_WEIGHT else None
+    # label_ratio = None
+    label_ratio = np.loadtxt('class_weights.csv', dtype=float, delimiter=',')
     backbone, c_output = build_backbone(cfg.BACKBONE.TYPE, cfg.BACKBONE.MULTISCALE)
 
 
@@ -195,7 +196,8 @@ def main(cfg, args):
             model, decay=cfg.TRAIN.EMA.DECAY, device='cpu' if cfg.TRAIN.EMA.FORCE_CPU else None)
 
     if cfg.RELOAD.TYPE:
-        model = get_reload_weight(model_dir, model, pth=cfg.RELOAD.PTH)
+        # model = get_reload_weight(model_dir, model, pth=cfg.RELOAD.PTH)
+        model = get_reload_weight(model_dir, model, pth='KETI_resnet_0.6726672327962699.pkl')
 
     loss_weight = cfg.LOSS.LOSS_WEIGHT
 
@@ -347,7 +349,7 @@ def trainer(cfg, args, epoch, model, model_ema, train_loader, valid_loader, crit
             lr_scheduler.step()
 
         if cfg.METRIC.TYPE == 'pedestrian':
-
+            print(valid_probs)
             train_result = get_pedestrian_metrics(train_gt, train_probs, index=None, cfg=cfg)
             valid_result = get_pedestrian_metrics(valid_gt, valid_probs, index=None, cfg=cfg)
 
@@ -382,7 +384,7 @@ def trainer(cfg, args, epoch, model, model_ema, train_loader, valid_loader, crit
                 maximum = cur_metric
                 best_epoch = e
                 save_ckpt(model, path.replace(':', '.'), e, maximum)
-            torch.save(model.state_dict(), "ckpt_max_KETI_no_ema_{}.pkl".format(cur_metric))
+            torch.save(model.state_dict(), "KETI_resnet_weights_{}.pkl".format(cur_metric))
 
             result_list[e] = {
                 'train_result': train_result,  # 'train_map': train_map,
